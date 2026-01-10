@@ -47,7 +47,7 @@ export const siteSettings: SiteSettings = {
         email: "contao@diegoplomeria.com",
         address: "Medellín, Antioquia",
         workingHours: "Atención 24 Horas",
-        trustIndicator: "Más de 10 empresas líderes han confiado en nosotros",
+        trustIndicator: "Más de 500 servicios exitosos este mes",
     },
     navigation: {
         main: [
@@ -71,7 +71,7 @@ export const siteSettings: SiteSettings = {
     },
     home: {
         hero: {
-            badge: "Disponibles en todo Medellín",
+            badge: "Disponibles 24/7 en Medellín",
             title: "Plomeros Expertos en Medellín",
             subtitle: "Soluciones rápidas y garantizadas para tu hogar. Llegamos en menos de 60 minutos.",
             primaryCTA: "Solicitar Servicio Ahora",
