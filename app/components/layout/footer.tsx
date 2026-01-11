@@ -117,10 +117,36 @@ const Footer = () => {
                     <p className="text-black-light/50 dark:text-white-dark/50 text-xs">
                         © {new Date().getFullYear()} {siteSettings.company.name}. Todos los derechos reservados.
                     </p>
-                    <div className="flex items-center gap-6">
-                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-base/40">
-                            Hecho con ❤️ en Medellín
+                    <div className="flex items-center gap-3">
+                        <span className="text-black-light/50 dark:text-white-dark/50 text-xs font-medium">
+                            Hecho por
                         </span>
+                        <Link
+                            href="https://lopezdev.net"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5 group/link"
+                        >
+                            <div className="flex items-center">
+                                <span className="text-lg font-black tracking-tighter text-black-base dark:text-white-light group-hover/link:underline decoration-green-500/30 underline-offset-4">Lopez</span>
+                                <span className="text-lg font-black tracking-tighter text-green-500 group-hover/link:underline decoration-green-500/30 underline-offset-4">Dev</span>
+                            </div>
+                            <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="text-green-500 opacity-50 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all"
+                            >
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </Link>
                     </div>
                 </div>
             </div>

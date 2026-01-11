@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { siteSettings } from "@/app/data/siteSettings";
 
 interface ServiceHeroProps {
     title: string;
@@ -9,6 +10,7 @@ interface ServiceHeroProps {
     badge?: string;
     primaryCTA: string;
     secondaryCTA?: string;
+    serviceName: string;
 }
 
 const ServiceHero = ({
@@ -17,7 +19,12 @@ const ServiceHero = ({
     badge,
     primaryCTA,
     secondaryCTA,
+    serviceName,
 }: ServiceHeroProps) => {
+    const handleCTAClick = () => {
+        const message = encodeURIComponent(`Hola, me gustaría solicitar el servicio de ${serviceName}.`);
+        window.open(`https://wa.me/${siteSettings.company.whatsapp}?text=${message}`, '_blank');
+    };
     return (
         <section className="relative min-h-[70vh] w-full flex py-10 items-center justify-center overflow-hidden pt-20">
             {/* Background Image */}
@@ -65,7 +72,10 @@ const ServiceHero = ({
                 </p>
 
                 <div className="flex flex-col items-center gap-6">
-                    <button className="flex items-center gap-3 px-8 py-4 bg-blue-base hover:bg-blue-dark text-white-light rounded-2xl font-bold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-blue-base/30">
+                    <button
+                        onClick={handleCTAClick}
+                        className="flex items-center gap-3 px-8 py-4 bg-blue-base hover:bg-blue-dark text-white-light rounded-2xl font-bold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-blue-base/30"
+                    >
                         {primaryCTA}
                     </button>
                     {secondaryCTA && (

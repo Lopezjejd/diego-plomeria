@@ -37,7 +37,7 @@ const ServiceCarousel = () => {
                         <h2 className="text-4xl md:text-6xl font-black text-white-light mb-6">
                             Servicios Profesionales
                         </h2>
-                        <p className="text-lg text-white-light/70 max-w-2xl mx-auto">
+                        <p className="text-lg text-white-light font-bold max-w-2xl mx-auto">
                             Soluciones rápidas y garantizadas para cada necesidad. Tecnología de punta al servicio de tu hogar o empresa.
                         </p>
                     </ScrollReveal>
