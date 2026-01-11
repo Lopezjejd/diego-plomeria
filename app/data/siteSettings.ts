@@ -47,7 +47,7 @@ export const siteSettings: SiteSettings = {
         email: "contao@diegoplomeria.com",
         address: "Medellín, Antioquia",
         workingHours: "Atención 24 Horas",
-        trustIndicator: "Más de 500 servicios exitosos este mes",
+        trustIndicator: "Mas de 5 empresas de antioquia confian en nosotros",
     },
     navigation: {
         main: [

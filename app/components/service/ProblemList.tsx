@@ -130,7 +130,7 @@ const ProblemList = ({ problems }: ProblemListProps) => {
                     {problems.map((problem, index) => (
                         <div
                             key={index}
-                            className="p-8 aspect-square flex flex-col items-center text-center justify-center rounded-[40px] bg-white dark:bg-black-base border border-blue-base/10 shadow-2xl shadow-blue-base/15 hover:shadow-blue-base/25 hover:border-blue-base/30 transition-all duration-500 group"
+                            className="p-8 aspect-square w-xs mx-auto flex flex-col items-center text-center justify-center rounded-[40px] bg-white dark:bg-black-base border border-blue-base/10 shadow-2xl shadow-blue-base/15 hover:shadow-blue-base/25 hover:border-blue-base/30 transition-all duration-500 group"
                         >
                             <div className="w-16 h-16 rounded-2xl bg-blue-base/5 flex items-center justify-center text-blue-base mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500">
                                 <IconWrapper name={problem.icon} />

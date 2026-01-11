@@ -25,42 +25,41 @@ const Header = () => {
                 : "py-5 bg-white dark:bg-black-base"
                 }`}
         >
-            <div className="container mx-auto px-6 flex items-center justify-between">
-                {/* LOGO */}
-                <Link href="/" className="flex items-center gap-2 group">
-                    <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
-                        <Image
-                            src="/hero/icon.png"
-                            alt={`${siteSettings.company.name} Logo`}
-                            fill
-                            className="object-contain"
-                        />
-                    </div>
-                    <span className="text-xl md:text-2xl font-black tracking-tight text-black-base dark:text-white-light">
-                        {siteSettings.company.logoText} <span className="text-blue-base">Medellín</span>
-                    </span>
-                </Link>
-
-                {/* DESKTOP NAV - Horizontal */}
-                <nav className="hidden md:flex items-center gap-8">
-                    <Link href="/" className="text-sm font-bold text-black-base dark:text-white-light hover:text-blue-base transition-colors">Inicio</Link>
-                    <Link href="#servicios" className="text-sm font-bold text-black-base dark:text-white-light hover:text-blue-base transition-colors">Servicios</Link>
-                    <Link href="#zonas" className="text-sm font-bold text-black-base dark:text-white-light hover:text-blue-base transition-colors">Zonas</Link>
-                </nav>
-
-                {/* RIGHT ACTIONS */}
-                <div className="flex items-center gap-3">
-                    {/* Call Button - Always visible on mobile */}
-                    <Link
-                        href={`tel:${siteSettings.company.phone}`}
-                        className="flex items-center justify-center w-11 h-11 bg-blue-base/10 text-blue-base rounded-full hover:bg-blue-base hover:text-white-light transition-all duration-300 shadow-sm active:scale-90"
-                        aria-label="Llamar"
-                    >
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                        </svg>
+            <div className="container mx-auto px-6 flex items-center justify-between gap-6">
+                <div className="flex items-center gap-8">
+                    {/* LOGO */}
+                    <Link href="/" className="flex items-center gap-2 group">
+                        <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+                            <Image
+                                src="/hero/icon.png"
+                                alt={`${siteSettings.company.name} Logo`}
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <span className="text-xl md:text-2xl font-black tracking-tight text-black-base dark:text-white-light">
+                            {siteSettings.company.logoText}
+                        </span>
                     </Link>
 
+                    {/* DESKTOP NAV - Horizontal */}
+                    <nav className="flex items-center gap-4">
+                        <Link href="/" className="group flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-black-base border-2 border-blue-base hover:border-blue-base/40 text-blue-base dark:text-white-light hover:text-blue-base rounded-2xl font-bold text-sm transition-all duration-300 active:scale-95 shadow-lg shadow-black-base/5 hover:shadow-blue-base/5">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-blue-base dark:text-white-light group-hover:text-blue-base transition-colors">
+                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                            <span>Inicio</span>
+                        </Link>
+                    </nav>
+                </div>
+
+                {/* RIGHT ACTIONS */}
+                <div
+                    className="relative flex items-center gap-3"
+                    onMouseEnter={() => setIsMenuOpen(true)}
+                    onMouseLeave={() => setIsMenuOpen(false)}
+                >
                     {/* Blue Services Button */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -82,38 +81,38 @@ const Header = () => {
                             <path d="m6 9 6 6 6-6" />
                         </svg>
                     </button>
-                </div>
-            </div>
 
-            {/* DROPDOWN MENU - Compact Approach */}
-            <div className={`absolute top-full right-6 mt-4 w-[280px] bg-white/98 dark:bg-black/98 backdrop-blur-xl z-40 rounded-3xl border border-black-base/5 shadow-2xl transition-all duration-500 ease-in-out ${isMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible pointer-events-none -translate-y-4"}`}>
-                <div className="p-4 flex flex-col gap-2">
-                    <p className="px-4 py-2 text-[10px] font-bold text-black-light/40 dark:text-white-dark/40 uppercase tracking-[0.2em]">
-                        Nuestros Servicios
-                    </p>
-                    <div className="flex flex-col gap-2">
-                        {services.map((service) => (
-                            <Link
-                                key={service.slug}
-                                href={`/servicios/${service.slug}`}
-                                onClick={() => setIsMenuOpen(false)}
-                                className="group flex items-center justify-between px-4 py-3 rounded-2xl bg-black-base/5 dark:bg-white-light/5 hover:bg-blue-base transition-all duration-300"
-                            >
-                                <span className="text-sm font-bold text-black-base dark:text-white-light group-hover:text-white-light">{service.header.title.split(' en ')[0]}</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-blue-base group-hover:text-white-light transition-all">
-                                    <path d="m9 18 6-6-6-6" />
-                                </svg>
-                            </Link>
-                        ))}
-                    </div>
+                    {/* DROPDOWN MENU - Compact Approach */}
+                    <div className={`absolute top-full right-0 w-[280px] pt-4 z-40 transition-all duration-300 ease-in-out ${isMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible pointer-events-none -translate-y-2"}`}>
+                        <div className="bg-white/98 dark:bg-black/98 backdrop-blur-xl rounded-2xl border border-black-base/5 shadow-2xl p-4 flex flex-col gap-2">
+                            <p className="px-4 py-2 text-[10px] font-bold text-black-light/40 dark:text-white-dark/40 uppercase tracking-[0.2em]">
+                                Nuestros Servicios
+                            </p>
+                            <div className="flex flex-col gap-2">
+                                {services.map((service) => (
+                                    <Link
+                                        key={service.slug}
+                                        href={`/servicios/${service.slug}`}
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="group flex items-center justify-between px-4 py-3 rounded-2xl bg-black-base/5 dark:bg-white-light/5 hover:bg-blue-base transition-all duration-300"
+                                    >
+                                        <span className="text-sm font-bold text-black-base dark:text-white-light group-hover:text-white-light">{service.header.title.split(' en ')[0]}</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-blue-base group-hover:text-white-light transition-all">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </Link>
+                                ))}
+                            </div>
 
-                    <div className="mt-2 pt-4 border-t border-black-base/5 dark:border-white-light/5">
-                        <Link
-                            href={`https://wa.me/${siteSettings.company.whatsapp}`}
-                            className="w-full flex items-center justify-center gap-2 py-3 bg-blue-base text-white-light rounded-xl font-bold text-sm shadow-lg shadow-blue-base/20 transition-all active:scale-95"
-                        >
-                            Solicitar ahora
-                        </Link>
+                            <div className="mt-2 pt-4 border-t border-black-base/5 dark:border-white-light/5">
+                                <Link
+                                    href={`https://wa.me/${siteSettings.company.whatsapp}`}
+                                    className="w-full flex items-center justify-center gap-2 py-3 bg-blue-base text-white-light rounded-xl font-bold text-sm shadow-lg shadow-blue-base/20 transition-all active:scale-95"
+                                >
+                                    Solicitar ahora
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
