@@ -29,7 +29,7 @@ const Hero = () => {
                             muted
                             loop
                             playsInline
-                            poster="/hero/hero-backup.png"
+                            poster="/hero/bg-desk.jpeg"
                             className="absolute inset-0 w-full h-full object-cover"
                         >
                             <source src="/hero/video hero.mp4" type="video/mp4" />
@@ -37,31 +37,8 @@ const Hero = () => {
                     </div>
                 )}
 
-                {/* Desktop Background: Video & Image Placeholder */}
-                {isMobile === false && (
-                    <div className="w-full h-full relative">
-                        <video
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            poster="/hero/bg-desk.jpeg"
-                            className="absolute inset-0 w-full h-full object-cover"
-                        >
-                            <source src="/hero/video-desk.mp4" type="video/mp4" />
-                        </video>
-                        <Image
-                            src="/hero/bg-desk.jpeg"
-                            alt={`Fondo Plomería ${siteSettings.company.address}`}
-                            fill
-                            className="object-cover -z-10"
-                            priority
-                        />
-                    </div>
-                )}
-
-                {/* SSR/Initial State: Image only */}
-                {isMobile === null && (
+                {/* Desktop/Default Background: Image */}
+                {(isMobile === false || isMobile === null) && (
                     <div className="w-full h-full relative">
                         <Image
                             src="/hero/bg-desk.jpeg"
