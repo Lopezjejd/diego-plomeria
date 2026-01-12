@@ -4,56 +4,66 @@ export const services: ServiceConfig[] = [
     {
         slug: "instalacion-redes-gas",
         seo: {
-            title: "Instalación de Redes de Gas en Medellín | Plomería Diego López",
+            title: "Instalación de Redes de Gas a Domicilio en Medellín",
             description:
-                "Instalamos redes de gas en edificaciones residenciales, comerciales y de servicios, cumpliendo las normas vigentes."
+                "Instalación profesional de redes de gas a domicilio en Medellín. Atendemos hogares, comercios e industrias bajo normativas vigentes. Servicio certificado IRGASA.",
+            keywords: [
+                "instalación gas medellín",
+                "redes de gas medellín",
+                "plomero gas medellín",
+                "instalación gas domicilio",
+                "gas natural medellín",
+                "EPM gas instalación",
+                "gasodomésticos medellín",
+                "IRGASA gas"
+            ]
         },
 
         header: {
-            title: "Instalación de redes de gas",
+            title: "Instalación de Redes de Gas a Domicilio",
             subtitle:
-                "Instalamos redes de gas en edificaciones residenciales, comerciales y de servicios, cumpliendo las normas vigentes. Instalamos gasodomésticos y equipos industriales bajo diseños aprobados.",
+                "Instalamos redes de gas en tu hogar, comercio o industria cumpliendo todas las normas vigentes. Servicio profesional a domicilio en Medellín y área metropolitana.",
             badge: "Certificado y Seguro"
         },
 
         cta: {
-            primaryText: "Solicitar instalación",
-            secondaryText: "Servicio profesional en Medellín"
+            primaryText: "Solicitar Instalación",
+            secondaryText: "Servicio a domicilio en Medellín"
         },
 
         problems: [
             {
                 icon: "gas",
                 title: "Necesita instalación de gas",
-                description: "Instalación profesional y certificada."
+                description: "Instalación profesional y certificada a domicilio."
             },
             {
                 icon: "stove",
                 title: "Equipos industriales",
-                description: "Instalamos gasodomésticos y equipos."
+                description: "Instalamos gasodomésticos y equipos en tu ubicación."
             },
             {
                 icon: "risk",
                 title: "Cumplimiento normativo",
-                description: "Trabajos bajo diseños aprobados."
+                description: "Trabajos bajo diseños aprobados y certificados."
             }
         ],
 
         technology: {
-            title: "Instalación profesional",
+            title: "Instalación profesional a domicilio",
             description: "Cumpliendo todas las normas vigentes",
             items: [
                 {
                     icon: "inspection",
                     title: "Diseños aprobados",
                     description:
-                        "Trabajamos con diseños certificados."
+                        "Trabajamos con diseños certificados en tu proyecto."
                 },
                 {
                     icon: "sensor",
                     title: "Instalación segura",
                     description:
-                        "Garantizamos seguridad en cada instalación."
+                        "Garantizamos seguridad en cada instalación a domicilio."
                 }
             ]
         },
@@ -68,14 +78,14 @@ export const services: ServiceConfig[] = [
 
         faq: [
             {
-                question: "¿Qué tipo de edificaciones cubren?",
+                question: "¿Atienden a domicilio en todo Medellín?",
                 answer:
-                    "Trabajamos en edificaciones residenciales, comerciales y de servicios."
+                    "Sí, atendemos a domicilio en Medellín y toda el área metropolitana incluyendo Envigado, Bello, Itagüí y Sabaneta."
             },
             {
-                question: "¿Están certificados?",
+                question: "¿Están certificados para instalar gas?",
                 answer:
-                    "Sí, cumplimos con todas las normas vigentes y trabajamos con diseños aprobados."
+                    "Sí, cumplimos con todas las normas vigentes y trabajamos con diseños aprobados por las entidades competentes."
             }
         ],
 
@@ -99,56 +109,66 @@ export const services: ServiceConfig[] = [
     {
         slug: "instalacion-acueducto-alcantarillado",
         seo: {
-            title: "Instalación de Redes de Acueducto y Alcantarillado | Medellín",
+            title: "Instalación de Acueducto y Alcantarillado a Domicilio | Medellín",
             description:
-                "Instalación de tuberías, aparatos sanitarios, tanques y sistemas de presurización en casas, edificios y fincas."
+                "Servicio profesional de instalación de acueducto y alcantarillado a domicilio en Medellín. Tuberías, aparatos sanitarios y sistemas de presurización. IRGASA.",
+            keywords: [
+                "instalación acueducto medellín",
+                "alcantarillado medellín",
+                "plomero acueducto",
+                "tuberías medellín",
+                "aparatos sanitarios medellín",
+                "sistemas presurización",
+                "tanques agua medellín",
+                "IRGASA acueducto"
+            ]
         },
 
         header: {
-            title: "Instalaciones de redes de acueducto y alcantarillado",
+            title: "Instalación de Acueducto y Alcantarillado a Domicilio",
             subtitle:
-                "Instalación de tuberías, aparatos sanitarios, tanques y sistemas de presurización en casas, edificios y fincas.",
+                "Instalamos tuberías, aparatos sanitarios, tanques y sistemas de presurización directamente en tu hogar, edificio o finca. Servicio profesional a domicilio.",
             badge: "Instalación Completa"
         },
 
         cta: {
-            primaryText: "Solicitar cotización",
-            secondaryText: "Servicio para todo tipo de edificaciones"
+            primaryText: "Solicitar Cotización",
+            secondaryText: "Servicio a domicilio para todo tipo de proyectos"
         },
 
         problems: [
             {
                 icon: "water",
                 title: "Necesita instalación nueva",
-                description: "Instalamos sistemas completos de acueducto."
+                description: "Instalamos sistemas completos de acueducto a domicilio."
             },
             {
                 icon: "drain",
                 title: "Aparatos sanitarios",
-                description: "Instalamos todo tipo de aparatos sanitarios."
+                description: "Instalamos todo tipo de aparatos en tu ubicación."
             },
             {
                 icon: "pressure",
                 title: "Sistemas de presurización",
-                description: "Instalamos y configuramos sistemas de presión."
+                description: "Instalamos y configuramos sistemas de presión a domicilio."
             }
         ],
 
         technology: {
-            title: "Instalación completa y profesional",
-            description: "De tuberías a sistemas de presurización",
+            title: "Instalación completa a domicilio",
+            description: "De tuberías a sistemas de presurización en tu ubicación",
             items: [
                 {
                     icon: "pipe",
                     title: "Tuberías y conexiones",
                     description:
-                        "Instalamos redes completas de distribución."
+                        "Instalamos redes completas de distribución en tu proyecto."
                 },
                 {
                     icon: "inspection",
                     title: "Aparatos y tanques",
                     description:
-                        "Instalamos aparatos sanitarios y tanques."
+                        "Instalamos aparatos sanitarios y tanques a domicilio."
                 }
             ]
         },
@@ -163,14 +183,14 @@ export const services: ServiceConfig[] = [
 
         faq: [
             {
-                question: "¿Trabajan en fincas?",
+                question: "¿Trabajan en fincas y edificios?",
                 answer:
-                    "Sí, instalamos sistemas en casas, edificios y fincas."
+                    "Sí, nos desplazamos a domicilio para instalar sistemas en casas, edificios, fincas y proyectos comerciales."
             },
             {
                 question: "¿Incluye sistemas de presión?",
                 answer:
-                    "Sí, instalamos sistemas de presurización completos."
+                    "Sí, instalamos sistemas de presurización completos directamente en tu ubicación."
             }
         ],
 
@@ -196,31 +216,41 @@ export const services: ServiceConfig[] = [
         seo: {
             title: "Diseño de Redes de Acueducto y Alcantarillado | Medellín",
             description:
-                "Realizamos diseños de redes de abastecimiento, desagüe de aguas lluvias y residuales cumpliendo normas constructivas."
+                "Diseño profesional de redes de acueducto y alcantarillado para proyectos en Medellín. Planos certificados para legalización y construcción. Servicio IRGASA.",
+            keywords: [
+                "diseño acueducto medellín",
+                "diseño alcantarillado",
+                "planos hidráulicos medellín",
+                "legalización redes",
+                "diseño redes agua",
+                "planos sanitarios medellín",
+                "ingeniero hidráulico medellín",
+                "IRGASA diseño"
+            ]
         },
 
         header: {
-            title: "Diseño de redes de acueducto y alcantarillado (interno y externo)",
+            title: "Diseño de Redes de Acueducto y Alcantarillado",
             subtitle:
-                "Realizamos diseños de redes de abastecimiento, desagüe de aguas lluvias y residuales para casas, edificios, urbanizaciones y negocios, cumpliendo normas constructivas y requisitos de legalización.",
+                "Realizamos diseños profesionales de redes de abastecimiento y alcantarillado para tu proyecto. Planos certificados para legalización y construcción en Medellín.",
             badge: "Diseños Certificados"
         },
 
         cta: {
-            primaryText: "Solicitar diseño",
-            secondaryText: "Diseños para legalización"
+            primaryText: "Solicitar Diseño",
+            secondaryText: "Diseños para legalización y construcción"
         },
 
         problems: [
             {
                 icon: "pipe",
                 title: "Necesita diseño profesional",
-                description: "Diseños que cumplen normas constructivas."
+                description: "Diseños que cumplen normas para tu proyecto."
             },
             {
                 icon: "bill",
                 title: "Legalización",
-                description: "Diseños para requisitos de legalización."
+                description: "Diseños válidos para requisitos de legalización."
             },
             {
                 icon: "water",
@@ -230,20 +260,20 @@ export const services: ServiceConfig[] = [
         ],
 
         technology: {
-            title: "Diseños profesionales certificados",
+            title: "Diseños profesionales para tu proyecto",
             description: "Cumpliendo normas y requisitos de legalización",
             items: [
                 {
                     icon: "inspection",
                     title: "Normas constructivas",
                     description:
-                        "Diseños que cumplen todas las normas."
+                        "Diseños que cumplen todas las normas vigentes."
                 },
                 {
                     icon: "pipe",
                     title: "Abastecimiento y desagüe",
                     description:
-                        "Diseños de redes de agua y alcantarillado."
+                        "Diseños completos de redes hidráulicas y sanitarias."
                 }
             ]
         },
@@ -260,12 +290,12 @@ export const services: ServiceConfig[] = [
             {
                 question: "¿Los diseños sirven para legalización?",
                 answer:
-                    "Sí, nuestros diseños cumplen con todos los requisitos de legalización."
+                    "Sí, nuestros diseños cumplen con todos los requisitos para legalización ante entidades competentes."
             },
             {
-                question: "¿Trabajan para urbanizaciones?",
+                question: "¿Diseñan para urbanizaciones?",
                 answer:
-                    "Sí, diseñamos para casas, edificios, urbanizaciones y negocios."
+                    "Sí, diseñamos para casas, edificios, urbanizaciones y proyectos comerciales de cualquier escala."
             }
         ],
 
@@ -289,56 +319,66 @@ export const services: ServiceConfig[] = [
     {
         slug: "reparacion-fugas-mantenimiento",
         seo: {
-            title: "Reparación de Fugas y Mantenimiento de Desagües | Medellín",
+            title: "Reparación de Fugas y Mantenimiento a Domicilio | Medellín",
             description:
-                "Reparación de fugas, diagnóstico de problemas hidráulicos, desobstrucción de desagües y mantenimiento con sonda eléctrica."
+                "Reparación profesional de fugas y mantenimiento de desagües a domicilio en Medellín. Atención de emergencias 24/7. Sonda eléctrica y diagnóstico especializado. IRGASA.",
+            keywords: [
+                "reparación fugas medellín",
+                "plomero emergencia medellín",
+                "destape desagües medellín",
+                "mantenimiento plomería",
+                "fugas agua medellín",
+                "sonda eléctrica medellín",
+                "plomero 24 horas medellín",
+                "IRGASA reparaciones"
+            ]
         },
 
         header: {
-            title: "Reparación de fugas y mantenimiento de desagües",
+            title: "Reparación de Fugas y Mantenimiento a Domicilio",
             subtitle:
-                "Reparación de fugas, diagnóstico de problemas hidráulicos, desobstrucción de desagües, desmonte de aparatos sanitarios y mantenimiento de desagües con sonda eléctrica.",
-            badge: "Atención Rápida"
+                "Atendemos emergencias de plomería directamente en tu hogar o negocio. Reparación de fugas, destape de desagües y mantenimiento profesional con sonda eléctrica.",
+            badge: "Atención 24/7"
         },
 
         cta: {
-            primaryText: "Solicitar reparación",
-            secondaryText: "Servicio de emergencia disponible"
+            primaryText: "Solicitar Reparación",
+            secondaryText: "Servicio de emergencia a domicilio"
         },
 
         problems: [
             {
                 icon: "water",
                 title: "Fugas de agua",
-                description: "Reparamos todo tipo de fugas."
+                description: "Reparamos todo tipo de fugas en tu ubicación."
             },
             {
                 icon: "drain",
                 title: "Desagües tapados",
-                description: "Desobstrucción con sonda eléctrica."
+                description: "Destape profesional con sonda eléctrica a domicilio."
             },
             {
                 icon: "odor",
                 title: "Problemas hidráulicos",
-                description: "Diagnóstico y solución de problemas."
+                description: "Diagnóstico y solución directamente en tu hogar."
             }
         ],
 
         technology: {
-            title: "Reparación y mantenimiento profesional",
-            description: "Con tecnología de punta",
+            title: "Reparación profesional a domicilio",
+            description: "Con tecnología de punta en tu ubicación",
             items: [
                 {
                     icon: "inspection",
                     title: "Diagnóstico preciso",
                     description:
-                        "Identificamos el problema rápidamente."
+                        "Identificamos el problema rápidamente en tu hogar."
                 },
                 {
                     icon: "pressure",
                     title: "Sonda eléctrica",
                     description:
-                        "Mantenimiento de desagües con tecnología avanzada."
+                        "Mantenimiento de desagües con tecnología avanzada a domicilio."
                 }
             ]
         },
@@ -353,14 +393,14 @@ export const services: ServiceConfig[] = [
 
         faq: [
             {
-                question: "¿Reparan fugas sin romper?",
+                question: "¿Atienden emergencias a domicilio?",
                 answer:
-                    "Dependiendo del caso, usamos métodos que minimizan daños."
+                    "Sí, atendemos emergencias 24/7 directamente en tu hogar o negocio en Medellín y área metropolitana."
             },
             {
                 question: "¿Qué es la sonda eléctrica?",
                 answer:
-                    "Es una herramienta profesional para desobstruir y mantener desagües de forma efectiva."
+                    "Es una herramienta profesional que llevamos a tu ubicación para desobstruir y mantener desagües de forma efectiva."
             }
         ],
 
@@ -378,4 +418,3 @@ export const services: ServiceConfig[] = [
         ]
     }
 ]
-

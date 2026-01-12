@@ -4,6 +4,7 @@ export interface ServiceConfig {
   seo: {
     title: string
     description: string
+    keywords?: string[]
   }
 
   header: {

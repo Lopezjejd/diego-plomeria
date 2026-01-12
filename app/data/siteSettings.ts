@@ -6,7 +6,7 @@ export interface SiteSettings {
         whatsapp: string;
         phone: string;
         email: string;
-        address: string;
+        serviceArea: string;
         workingHours: string;
         trustIndicator: string;
     };
@@ -21,6 +21,10 @@ export interface SiteSettings {
         instagram?: string;
         facebook?: string;
         tiktok?: string;
+    };
+    seo: {
+        domain: string;
+        siteName: string;
     };
     home: {
         hero: {
@@ -39,15 +43,15 @@ export interface SiteSettings {
 
 export const siteSettings: SiteSettings = {
     company: {
-        name: "Diego Plomería",
-        logoText: "Plomeria",
-        description: "Servicios profesionales de plomería 24/7 en Medellín. Expertos en detección de fugas y mantenimiento.",
-        whatsapp: "573137367480", // Reemplazar con el real
+        name: "IRGASA",
+        logoText: "IRGASA",
+        description: "Servicios profesionales de plomería a domicilio en Medellín y área metropolitana. Instalaciones, reparaciones y redes de gas certificadas.",
+        whatsapp: "573137367480",
         phone: "3137367480",
-        email: "contao@diegoplomeria.com",
-        address: "Medellín, Antioquia",
+        email: "contacto@irgasa.com",
+        serviceArea: "Medellín y Área Metropolitana, Antioquia",
         workingHours: "Atención 24 Horas",
-        trustIndicator: "Mas de 5 empresas de antioquia confian en nosotros",
+        trustIndicator: "Más de 5 empresas de Antioquia confían en nosotros",
     },
     navigation: {
         main: [
@@ -66,20 +70,24 @@ export const siteSettings: SiteSettings = {
         ],
     },
     social: {
-        instagram: "https://instagram.com",
-        facebook: "https://facebook.com",
+        instagram: "https://instagram.com/irgasa",
+        facebook: "https://facebook.com/irgasa",
+    },
+    seo: {
+        domain: "https://irgasa.com",
+        siteName: "IRGASA",
     },
     home: {
         hero: {
             badge: "Disponibles 24/7 en Medellín",
-            title: "Plomeros Expertos en Medellín",
-            subtitle: "Soluciones rápidas y garantizadas para tu hogar. Llegamos en menos de 60 minutos.",
+            title: "Plomeros Expertos a Domicilio",
+            subtitle: "Servicios profesionales de plomería en tu hogar o negocio. Llegamos en menos de 60 minutos.",
             primaryCTA: "Solicitar Servicio Ahora",
         },
         zonas: {
             badge: "Cobertura Total",
-            title: "Disponibles en todo Medellín",
-            description: "Trabajo, rapidez y calidad garantizada en cada rincón de la ciudad.",
+            title: "Servicio a Domicilio en Todo Medellín",
+            description: "Atendemos en tu ubicación con rapidez y calidad garantizada.",
         },
     },
 };

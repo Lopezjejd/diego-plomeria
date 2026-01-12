@@ -10,6 +10,7 @@ import LocationsSection from "@/app/components/service/LocationsSection";
 import ServiceFAQ from "@/app/components/service/ServiceFAQ";
 import OtherServices from "@/app/components/service/OtherServices";
 import WhatsAppButton from "@/app/components/service/WhatsAppButton";
+import { ServiceJsonLd, FaqJsonLd } from "@/app/components/seo/JsonLd";
 
 export const revalidate = 3600; // Refrescar cada hora
 
@@ -29,9 +30,45 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     if (!service) return {};
 
+    const canonicalUrl = `https://irgasa.com/servicios/${service.slug}`;
+
     return {
         title: service.seo.title,
         description: service.seo.description,
+        keywords: service.seo.keywords,
+
+        openGraph: {
+            title: service.seo.title,
+            description: service.seo.description,
+            url: canonicalUrl,
+            siteName: "IRGASA",
+            locale: "es_CO",
+            type: "website",
+            images: [
+                {
+                    url: "/og-image.png",
+                    width: 1200,
+                    height: 630,
+                    alt: `${service.header.title} - IRGASA Medellín`,
+                },
+            ],
+        },
+
+        twitter: {
+            card: "summary_large_image",
+            title: service.seo.title,
+            description: service.seo.description,
+            images: ["/og-image.png"],
+        },
+
+        alternates: {
+            canonical: canonicalUrl,
+        },
+
+        robots: {
+            index: true,
+            follow: true,
+        },
     };
 }
 
@@ -45,6 +82,14 @@ export default async function ServicePage({ params }: Props) {
 
     return (
         <main className="grow">
+            {/* JSON-LD Structured Data */}
+            <ServiceJsonLd
+                serviceName={service.header.title}
+                serviceDescription={service.seo.description}
+                serviceSlug={service.slug}
+            />
+            <FaqJsonLd faqs={service.faq} />
+
             {/* HERO */}
             <ServiceHero
                 title={service.header.title}
@@ -86,10 +131,10 @@ export default async function ServicePage({ params }: Props) {
                         ¿Necesitas ayuda inmediata?
                     </h2>
                     <p className="text-xl md:text-2xl mb-12 text-white-base/90 max-w-2xl mx-auto font-medium">
-                        Atendemos emergencias las 24 horas del día en todo Medellín y el Valle de Aburrá.
+                        Atendemos a domicilio las 24 horas del día en todo Medellín y el Valle de Aburrá.
                     </p>
                     <Link
-                        href={`https://wa.me/${siteSettings.company.whatsapp}?text=${encodeURIComponent(`Hola, me gustaría solicitar el servicio de ${service.header.title}.`)}`}
+                        href={`https://wa.me/${siteSettings.company.whatsapp}?text=${encodeURIComponent(`Hola, me gustaría solicitar el servicio de ${service.header.title} a domicilio.`)}`}
                         target="_blank"
                         className="inline-flex items-center gap-3 px-10 py-5 bg-white text-blue-base rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-[0_20px_50px_rgba(255,255,255,0.2)] active:scale-95"
                     >
