@@ -26,7 +26,7 @@ const ServiceHero = ({
         window.open(`https://wa.me/${siteSettings.company.whatsapp}?text=${message}`, '_blank');
     };
     return (
-        <section className="relative min-h-[70vh] w-full flex py-10 items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-[70vh] w-full flex py-20 items-center justify-center overflow-hidden pt-20">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -40,7 +40,7 @@ const ServiceHero = ({
             </div>
 
             {/* Content */}
-            <div className="relative z-20 container mx-auto px-6 flex flex-col items-center text-center max-w-4xl">
+            <div className="relative z-20 container mx-auto px-6 py-10 flex flex-col items-center text-center max-w-4xl">
                 {badge && (
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-light/30 bg-blue-base/10 backdrop-blur-md mb-8">
                         <svg

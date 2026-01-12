@@ -130,15 +130,15 @@ const ProblemList = ({ problems }: ProblemListProps) => {
                     {problems.map((problem, index) => (
                         <div
                             key={index}
-                            className="p-8 aspect-square w-xs mx-auto flex flex-col items-center text-center justify-center rounded-[40px] bg-white dark:bg-black-base border border-blue-base/10 shadow-2xl shadow-blue-base/15 hover:shadow-blue-base/25 hover:border-blue-base/30 transition-all duration-500 group"
+                            className="p-8 aspect-square w-70 mx-auto flex flex-col items-center text-center justify-center rounded-[40px] bg-red-600 border border-red-500/20 shadow-2xl shadow-red-900/20 hover:shadow-red-900/30 hover:border-red-400/30 transition-all duration-500 group"
                         >
-                            <div className="w-16 h-16 rounded-2xl bg-blue-base/5 flex items-center justify-center text-blue-base mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500">
+                            <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-red-600 mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500">
                                 <IconWrapper name={problem.icon} />
                             </div>
-                            <h3 className="text-xl font-bold text-black-base dark:text-white-light mb-4">
+                            <h3 className="text-xl font-bold text-white mb-4">
                                 {problem.title}
                             </h3>
-                            <p className="text-black-light/60 dark:text-white-dark/60 leading-relaxed text-sm">
+                            <p className="text-white/90 leading-relaxed text-sm">
                                 {problem.description}
                             </p>
                         </div>

@@ -17,7 +17,7 @@ const WhatsAppButton = ({ serviceName }: WhatsAppButtonProps) => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 px-6 py-4 bg-blue-base text-white-light rounded-2xl font-bold shadow-2xl shadow-blue-base/40 transition-all hover:scale-105 active:scale-95 border border-white/20"
+                className="group flex items-center  gap-3 px-6 py-4 bg-green-500 text-white-light rounded-2xl font-bold shadow-lg shadow-green-400/80 transition-all hover:scale-105 active:scale-95 border border-white/20"
                 aria-label="Solicitar por WhatsApp"
             >
                 <svg
