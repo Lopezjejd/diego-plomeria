@@ -53,6 +53,7 @@ export default async function ServicePage({ params }: Props) {
                 primaryCTA={service.cta.primaryText}
                 secondaryCTA={service.cta.secondaryText}
                 serviceName={service.header.title}
+                backgroundImage={service.slug}
             />
 
             {/* PROBLEMS LIST */}

@@ -11,6 +11,7 @@ interface ServiceHeroProps {
     primaryCTA: string;
     secondaryCTA?: string;
     serviceName: string;
+    backgroundImage: string;
 }
 
 const ServiceHero = ({
@@ -20,6 +21,7 @@ const ServiceHero = ({
     primaryCTA,
     secondaryCTA,
     serviceName,
+    backgroundImage
 }: ServiceHeroProps) => {
     const handleCTAClick = () => {
         const message = encodeURIComponent(`Hola, me gustaría solicitar el servicio de ${serviceName}.`);
@@ -30,7 +32,7 @@ const ServiceHero = ({
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/hero/bg-desk.jpeg" // Fallback or dynamic if needed, for now using site theme
+                    src={`/services/${backgroundImage}.jpg`} // Fallback or dynamic if needed, for now using site theme
                     alt={title}
                     fill
                     className="object-cover"
