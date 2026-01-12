@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import PulseGrid from "../ui/PulseGrid";
 
 interface Problem {
     icon: string;
@@ -103,50 +104,53 @@ const IconWrapper = ({ name }: { name: string }) => {
 
 const ProblemList = ({ problems }: ProblemListProps) => {
     return (
-        <section className="py-24 relative overflow-hidden bg-linear-to-tr from-blue-base/10 via-white to-white">
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col items-center text-center mb-16">
-                    <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-red-500/10 border border-red-500/30 shadow-sm transition-all duration-300">
-                        <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="3"
-                            className="text-red-600"
-                        >
-                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
-                            <path d="M12 9v4" />
-                            <path d="M12 17h.01" />
-                        </svg>
-                        <h2 className="text-xl md:text-2xl font-black text-red-600 tracking-tight uppercase">
-                            ¿Te pasa alguno de estos problemas?
-                        </h2>
+        <section className="relative overflow-hidden">
+            <PulseGrid variant="red">
+                <div className="container mx-auto px-6 py-24 relative z-10">
+                    <div className="flex flex-col items-center text-center mb-16">
+                        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/10 border border-white/20 shadow-sm transition-all duration-300">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="3"
+                                className="text-white"
+                            >
+                                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                                <path d="M12 9v4" />
+                                <path d="M12 17h.01" />
+                            </svg>
+                            <h2 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase">
+                                ¿Te pasa alguno de estos problemas?
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {problems.map((problem, index) => (
+                            <div
+                                key={index}
+                                className="p-8 aspect-square w-70 mx-auto flex flex-col items-center text-center justify-center rounded-[40px] bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl shadow-red-900/20 hover:shadow-red-900/30 hover:border-white/20 transition-all duration-500 group"
+                            >
+                                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500">
+                                    <IconWrapper name={problem.icon} />
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-4">
+                                    {problem.title}
+                                </h3>
+                                <p className="text-white/80 leading-relaxed text-sm">
+                                    {problem.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {problems.map((problem, index) => (
-                        <div
-                            key={index}
-                            className="p-8 aspect-square w-70 mx-auto flex flex-col items-center text-center justify-center rounded-[40px] bg-red-600 border border-red-500/20 shadow-2xl shadow-red-900/20 hover:shadow-red-900/30 hover:border-red-400/30 transition-all duration-500 group"
-                        >
-                            <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-red-600 mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500">
-                                <IconWrapper name={problem.icon} />
-                            </div>
-                            <h3 className="text-xl font-bold text-white mb-4">
-                                {problem.title}
-                            </h3>
-                            <p className="text-white/90 leading-relaxed text-sm">
-                                {problem.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            </PulseGrid>
         </section>
     );
 };
 
 export default ProblemList;
+
