@@ -46,6 +46,7 @@ const Hero = () => {
                             fill
                             className="object-cover"
                             priority
+
                         />
                     </div>
                 )}

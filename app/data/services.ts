@@ -2,65 +2,255 @@ import { ServiceConfig } from "@/app/types/service"
 
 export const services: ServiceConfig[] = [
     {
-        slug: "deteccion-de-fugas",
+        slug: "instalacion-redes-gas",
         seo: {
-            title: "Detección de Fugas en Medellín | Plomeros Medellín",
+            title: "Instalación de Redes de Gas en Medellín | Plomería Diego López",
             description:
-                "Detectamos fugas de agua sin romper pisos ni paredes. Servicio 24/7 en Medellín."
+                "Instalamos redes de gas en edificaciones residenciales, comerciales y de servicios, cumpliendo las normas vigentes."
         },
 
         header: {
-            title: "Detección de Fugas en Medellín",
+            title: "Instalación de redes de gas",
             subtitle:
-                "Tecnología no invasiva para detectar fugas sin romper sus pisos ni paredes.",
-            badge: "Garantía Certificada"
+                "Instalamos redes de gas en edificaciones residenciales, comerciales y de servicios, cumpliendo las normas vigentes. Instalamos gasodomésticos y equipos industriales bajo diseños aprobados.",
+            badge: "Certificado y Seguro"
         },
 
         cta: {
-            primaryText: "Solicitar servicio ahora",
-            secondaryText: "Disponible 24/7 en el área metropolitana"
+            primaryText: "Solicitar instalación",
+            secondaryText: "Servicio profesional en Medellín"
+        },
+
+        problems: [
+            {
+                icon: "gas",
+                title: "Necesita instalación de gas",
+                description: "Instalación profesional y certificada."
+            },
+            {
+                icon: "stove",
+                title: "Equipos industriales",
+                description: "Instalamos gasodomésticos y equipos."
+            },
+            {
+                icon: "risk",
+                title: "Cumplimiento normativo",
+                description: "Trabajos bajo diseños aprobados."
+            }
+        ],
+
+        technology: {
+            title: "Instalación profesional",
+            description: "Cumpliendo todas las normas vigentes",
+            items: [
+                {
+                    icon: "inspection",
+                    title: "Diseños aprobados",
+                    description:
+                        "Trabajamos con diseños certificados."
+                },
+                {
+                    icon: "sensor",
+                    title: "Instalación segura",
+                    description:
+                        "Garantizamos seguridad en cada instalación."
+                }
+            ]
+        },
+
+        locations: [
+            { label: "Medellín" },
+            { label: "El Poblado" },
+            { label: "Envigado" },
+            { label: "Bello" },
+            { label: "Sabaneta" }
+        ],
+
+        faq: [
+            {
+                question: "¿Qué tipo de edificaciones cubren?",
+                answer:
+                    "Trabajamos en edificaciones residenciales, comerciales y de servicios."
+            },
+            {
+                question: "¿Están certificados?",
+                answer:
+                    "Sí, cumplimos con todas las normas vigentes y trabajamos con diseños aprobados."
+            }
+        ],
+
+        otherServices: [
+            {
+                slug: "instalacion-acueducto-alcantarillado",
+                title: "Instalación de Acueducto",
+                icon: "water"
+            },
+            {
+                slug: "diseno-redes",
+                title: "Diseño de Redes",
+                icon: "pipe"
+            }
+        ]
+    },
+
+    // ============================
+    // INSTALACIÓN DE ACUEDUCTO Y ALCANTARILLADO
+    // ============================
+    {
+        slug: "instalacion-acueducto-alcantarillado",
+        seo: {
+            title: "Instalación de Redes de Acueducto y Alcantarillado | Medellín",
+            description:
+                "Instalación de tuberías, aparatos sanitarios, tanques y sistemas de presurización en casas, edificios y fincas."
+        },
+
+        header: {
+            title: "Instalaciones de redes de acueducto y alcantarillado",
+            subtitle:
+                "Instalación de tuberías, aparatos sanitarios, tanques y sistemas de presurización en casas, edificios y fincas.",
+            badge: "Instalación Completa"
+        },
+
+        cta: {
+            primaryText: "Solicitar cotización",
+            secondaryText: "Servicio para todo tipo de edificaciones"
         },
 
         problems: [
             {
                 icon: "water",
-                title: "Humedad en paredes",
-                description: "Manchas de agua, pintura inflada o moho visible."
+                title: "Necesita instalación nueva",
+                description: "Instalamos sistemas completos de acueducto."
+            },
+            {
+                icon: "drain",
+                title: "Aparatos sanitarios",
+                description: "Instalamos todo tipo de aparatos sanitarios."
+            },
+            {
+                icon: "pressure",
+                title: "Sistemas de presurización",
+                description: "Instalamos y configuramos sistemas de presión."
+            }
+        ],
+
+        technology: {
+            title: "Instalación completa y profesional",
+            description: "De tuberías a sistemas de presurización",
+            items: [
+                {
+                    icon: "pipe",
+                    title: "Tuberías y conexiones",
+                    description:
+                        "Instalamos redes completas de distribución."
+                },
+                {
+                    icon: "inspection",
+                    title: "Aparatos y tanques",
+                    description:
+                        "Instalamos aparatos sanitarios y tanques."
+                }
+            ]
+        },
+
+        locations: [
+            { label: "Medellín" },
+            { label: "Envigado" },
+            { label: "Bello" },
+            { label: "Itagüí" },
+            { label: "Sabaneta" }
+        ],
+
+        faq: [
+            {
+                question: "¿Trabajan en fincas?",
+                answer:
+                    "Sí, instalamos sistemas en casas, edificios y fincas."
+            },
+            {
+                question: "¿Incluye sistemas de presión?",
+                answer:
+                    "Sí, instalamos sistemas de presurización completos."
+            }
+        ],
+
+        otherServices: [
+            {
+                slug: "instalacion-redes-gas",
+                title: "Instalación de Gas",
+                icon: "gas"
+            },
+            {
+                slug: "diseno-redes",
+                title: "Diseño de Redes",
+                icon: "pipe"
+            }
+        ]
+    },
+
+    // ============================
+    // DISEÑO DE REDES
+    // ============================
+    {
+        slug: "diseno-redes",
+        seo: {
+            title: "Diseño de Redes de Acueducto y Alcantarillado | Medellín",
+            description:
+                "Realizamos diseños de redes de abastecimiento, desagüe de aguas lluvias y residuales cumpliendo normas constructivas."
+        },
+
+        header: {
+            title: "Diseño de redes de acueducto y alcantarillado (interno y externo)",
+            subtitle:
+                "Realizamos diseños de redes de abastecimiento, desagüe de aguas lluvias y residuales para casas, edificios, urbanizaciones y negocios, cumpliendo normas constructivas y requisitos de legalización.",
+            badge: "Diseños Certificados"
+        },
+
+        cta: {
+            primaryText: "Solicitar diseño",
+            secondaryText: "Diseños para legalización"
+        },
+
+        problems: [
+            {
+                icon: "pipe",
+                title: "Necesita diseño profesional",
+                description: "Diseños que cumplen normas constructivas."
             },
             {
                 icon: "bill",
-                title: "Facturas altas",
-                description: "Incrementos injustificados en el cobro de EPM."
+                title: "Legalización",
+                description: "Diseños para requisitos de legalización."
             },
             {
-                icon: "noise",
-                title: "Ruido de agua",
-                description: "Sonido constante incluso con llaves cerradas."
+                icon: "water",
+                title: "Urbanizaciones y edificios",
+                description: "Diseños para proyectos de cualquier escala."
             }
         ],
 
         technology: {
-            title: "Así solucionamos el problema",
-            description: "Detectamos el punto exacto sin dañar tu casa",
+            title: "Diseños profesionales certificados",
+            description: "Cumpliendo normas y requisitos de legalización",
             items: [
                 {
-                    icon: "thermal",
-                    title: "Cámaras térmicas",
+                    icon: "inspection",
+                    title: "Normas constructivas",
                     description:
-                        "Identificamos cambios de temperatura para localizar la fuga."
+                        "Diseños que cumplen todas las normas."
                 },
                 {
-                    icon: "geophone",
-                    title: "Geófono",
+                    icon: "pipe",
+                    title: "Abastecimiento y desagüe",
                     description:
-                        "Escuchamos fugas subterráneas con precisión milimétrica."
+                        "Diseños de redes de agua y alcantarillado."
                 }
             ]
         },
 
         locations: [
+            { label: "Medellín" },
             { label: "El Poblado" },
-            { label: "Laureles" },
             { label: "Envigado" },
             { label: "Bello" },
             { label: "Sabaneta" }
@@ -68,181 +258,87 @@ export const services: ServiceConfig[] = [
 
         faq: [
             {
-                question: "¿Cuánto cuesta la visita de revisión?",
+                question: "¿Los diseños sirven para legalización?",
                 answer:
-                    "El valor depende del tipo de inspección y la zona. Te informamos antes de ir."
+                    "Sí, nuestros diseños cumplen con todos los requisitos de legalización."
             },
             {
-                question: "¿Cubren daños estéticos?",
+                question: "¿Trabajan para urbanizaciones?",
                 answer:
-                    "Nuestro método evita romper pisos y paredes, minimizando daños."
+                    "Sí, diseñamos para casas, edificios, urbanizaciones y negocios."
             }
         ],
 
         otherServices: [
             {
-                slug: "destape-de-canerias",
-                title: "Destape de Cañerías",
-                icon: "pipe"
+                slug: "instalacion-acueducto-alcantarillado",
+                title: "Instalación de Acueducto",
+                icon: "water"
             },
             {
-                slug: "fugas-de-gas",
-                title: "Fugas de Gas",
-                icon: "gas"
+                slug: "reparacion-fugas-mantenimiento",
+                title: "Reparación y Mantenimiento",
+                icon: "drain"
             }
         ]
     },
 
     // ============================
-    // DESTAPE DE CAÑERÍAS
+    // REPARACIÓN Y MANTENIMIENTO
     // ============================
     {
-        slug: "destape-de-canerias",
+        slug: "reparacion-fugas-mantenimiento",
         seo: {
-            title: "Destape de Cañerías en Medellín | Servicio Rápido",
+            title: "Reparación de Fugas y Mantenimiento de Desagües | Medellín",
             description:
-                "Destapamos cañerías y desagües de forma rápida y segura. Atención inmediata en Medellín."
+                "Reparación de fugas, diagnóstico de problemas hidráulicos, desobstrucción de desagües y mantenimiento con sonda eléctrica."
         },
 
         header: {
-            title: "Destape de Cañerías en Medellín",
+            title: "Reparación de fugas y mantenimiento de desagües",
             subtitle:
-                "Solucionamos obstrucciones sin dañar tus tuberías.",
-            badge: "Atención Inmediata"
+                "Reparación de fugas, diagnóstico de problemas hidráulicos, desobstrucción de desagües, desmonte de aparatos sanitarios y mantenimiento de desagües con sonda eléctrica.",
+            badge: "Atención Rápida"
         },
 
         cta: {
-            primaryText: "Destapar ahora",
-            secondaryText: "Servicio para hogares y apartamentos"
+            primaryText: "Solicitar reparación",
+            secondaryText: "Servicio de emergencia disponible"
         },
 
         problems: [
             {
+                icon: "water",
+                title: "Fugas de agua",
+                description: "Reparamos todo tipo de fugas."
+            },
+            {
                 icon: "drain",
-                title: "Desagües lentos",
-                description: "El agua tarda en drenar o se devuelve."
+                title: "Desagües tapados",
+                description: "Desobstrucción con sonda eléctrica."
             },
             {
                 icon: "odor",
-                title: "Malos olores",
-                description: "Olores fuertes provenientes de sifones o cañerías."
-            },
-            {
-                icon: "overflow",
-                title: "Reboses",
-                description: "Inodoros o lavaplatos que se tapan constantemente."
+                title: "Problemas hidráulicos",
+                description: "Diagnóstico y solución de problemas."
             }
         ],
 
         technology: {
-            title: "Cómo destapamos tus cañerías",
-            description: "Métodos seguros y efectivos",
+            title: "Reparación y mantenimiento profesional",
+            description: "Con tecnología de punta",
             items: [
+                {
+                    icon: "inspection",
+                    title: "Diagnóstico preciso",
+                    description:
+                        "Identificamos el problema rápidamente."
+                },
                 {
                     icon: "pressure",
-                    title: "Presión controlada",
+                    title: "Sonda eléctrica",
                     description:
-                        "Eliminamos obstrucciones sin romper tuberías."
-                },
-                {
-                    icon: "inspection",
-                    title: "Inspección previa",
-                    description:
-                        "Evaluamos el estado antes de intervenir."
-                }
-            ]
-        },
-
-        locations: [
-            { label: "Medellín" },
-            { label: "Envigado" },
-            { label: "Bello" },
-            { label: "Itagüí" }
-        ],
-
-        faq: [
-            {
-                question: "¿Qué tipos de cañerías destapan?",
-                answer:
-                    "Destapamos lavaplatos, baños, sifones, lavaderos y desagües en general."
-            },
-            {
-                question: "¿El servicio daña las tuberías?",
-                answer:
-                    "No. Usamos técnicas seguras que protegen la instalación."
-            }
-        ],
-
-        otherServices: [
-            {
-                slug: "deteccion-de-fugas",
-                title: "Detección de Fugas",
-                icon: "water"
-            },
-            {
-                slug: "fugas-de-gas",
-                title: "Fugas de Gas",
-                icon: "gas"
-            }
-        ]
-    },
-
-    // ============================
-    // FUGAS DE GAS
-    // ============================
-    {
-        slug: "fugas-de-gas",
-        seo: {
-            title: "Detección de Fugas de Gas en Medellín | Emergencias",
-            description:
-                "Detectamos fugas de gas de forma segura y profesional. Atención urgente en Medellín."
-        },
-
-        header: {
-            title: "Detección de Fugas de Gas",
-            subtitle:
-                "Protegemos tu hogar y tu familia ante riesgos de gas.",
-            badge: "Emergencias 24/7"
-        },
-
-        cta: {
-            primaryText: "Solicitar revisión urgente",
-            secondaryText: "Atención inmediata en Medellín"
-        },
-
-        problems: [
-            {
-                icon: "smell",
-                title: "Olor a gas",
-                description: "Olor persistente en cocina o zonas cerradas."
-            },
-            {
-                icon: "stove",
-                title: "Equipos defectuosos",
-                description: "Estufas o calentadores que fallan."
-            },
-            {
-                icon: "risk",
-                title: "Riesgo de accidentes",
-                description: "Posible peligro para personas y vivienda."
-            }
-        ],
-
-        technology: {
-            title: "Detección segura y precisa",
-            description: "Métodos certificados para tu tranquilidad",
-            items: [
-                {
-                    icon: "sensor",
-                    title: "Sensores de gas",
-                    description:
-                        "Detectamos concentraciones peligrosas."
-                },
-                {
-                    icon: "inspection",
-                    title: "Revisión técnica",
-                    description:
-                        "Evaluamos conexiones y válvulas."
+                        "Mantenimiento de desagües con tecnología avanzada."
                 }
             ]
         },
@@ -251,31 +347,32 @@ export const services: ServiceConfig[] = [
             { label: "Medellín" },
             { label: "Laureles" },
             { label: "El Poblado" },
-            { label: "Sabaneta" }
+            { label: "Envigado" },
+            { label: "Bello" }
         ],
 
         faq: [
             {
-                question: "¿Qué hago si huelo gas?",
+                question: "¿Reparan fugas sin romper?",
                 answer:
-                    "Cierra la válvula principal y contáctanos de inmediato."
+                    "Dependiendo del caso, usamos métodos que minimizan daños."
             },
             {
-                question: "¿Trabajan con gas natural?",
+                question: "¿Qué es la sonda eléctrica?",
                 answer:
-                    "Sí, realizamos inspecciones en instalaciones residenciales."
+                    "Es una herramienta profesional para desobstruir y mantener desagües de forma efectiva."
             }
         ],
 
         otherServices: [
             {
-                slug: "deteccion-de-fugas",
-                title: "Detección de Fugas de Agua",
-                icon: "water"
+                slug: "instalacion-redes-gas",
+                title: "Instalación de Gas",
+                icon: "gas"
             },
             {
-                slug: "destape-de-canerias",
-                title: "Destape de Cañerías",
+                slug: "diseno-redes",
+                title: "Diseño de Redes",
                 icon: "pipe"
             }
         ]

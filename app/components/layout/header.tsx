@@ -29,17 +29,16 @@ const Header = () => {
                 <div className="flex items-center gap-8">
                     {/* LOGO */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+                        <div className="relative w-30 sm:w-45 h-10 transition-transform duration-300 group-hover:scale-110">
                             <Image
-                                src="/hero/icon.png"
+                                src="/hero/icono.png"
                                 alt={`${siteSettings.company.name} Logo`}
                                 fill
-                                className="object-contain"
+                                className="object-cover"
+
                             />
                         </div>
-                        <span className="text-xl md:text-2xl font-black tracking-tight text-black-base dark:text-white-light">
-                            {siteSettings.company.logoText}
-                        </span>
+
                     </Link>
 
                     {/* DESKTOP NAV - Horizontal */}

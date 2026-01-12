@@ -43,7 +43,7 @@ export const siteSettings: SiteSettings = {
         logoText: "Plomeria",
         description: "Servicios profesionales de plomería 24/7 en Medellín. Expertos en detección de fugas y mantenimiento.",
         whatsapp: "573137367480", // Reemplazar con el real
-        phone: "30137367480",
+        phone: "3137367480",
         email: "contao@diegoplomeria.com",
         address: "Medellín, Antioquia",
         workingHours: "Atención 24 Horas",
