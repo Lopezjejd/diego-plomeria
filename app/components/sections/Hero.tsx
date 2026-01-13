@@ -42,7 +42,7 @@ const Hero = () => {
                     <div className="w-full h-full relative">
                         <Image
                             src="/hero/bg-desk.jpeg"
-                            alt={`Fondo Plomería ${siteSettings.company.address}`}
+                            alt={`Fondo Plomería`}
                             fill
                             className="object-cover"
                             priority

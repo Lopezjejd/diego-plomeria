@@ -10,7 +10,7 @@ const serviceZones = [
     {
         id: "envigado",
         name: "Envigado",
-        imageUrl: "/slider/envigado.jpeg",
+        imageUrl: "/slider/envigado.jpg",
     },
     {
         id: "sabaneta",
@@ -20,32 +20,32 @@ const serviceZones = [
     {
         id: "itagui",
         name: "Itagüí",
-        imageUrl: "/slider/itagui.jpeg",
+        imageUrl: "/slider/itagui.jpg",
     },
     {
         id: "bello",
         name: "Bello",
-        imageUrl: "/slider/bello.jpeg",
+        imageUrl: "/slider/bello.jpg",
     },
     {
         id: "copacabana",
         name: "Copacabana",
-        imageUrl: "/slider/copacabana.jpeg",
+        imageUrl: "/slider/copacabana.jpg",
     },
     {
         id: "girardota",
         name: "Girardota",
-        imageUrl: "/slider/girardota.jpeg",
+        imageUrl: "/slider/girardota.jpg",
     },
     {
         id: "estrella",
         name: "La Estrella",
-        imageUrl: "/slider/estrella.jpeg",
+        imageUrl: "/slider/estrella.webp",
     },
     {
         id: "caldas",
         name: "Caldas",
-        imageUrl: "/slider/caldas.jpeg",
+        imageUrl: "/slider/caldas.jpg",
     },
 ];
 
@@ -53,6 +53,7 @@ const Zonas = () => {
     return (
         <section className="py-24 bg-white dark:bg-black-base relative overflow-hidden" id="zonas">
             <div className="container mx-auto px-6 mb-16">
+
                 <div className="flex flex-col items-center text-center">
                     <ScrollReveal animation="fade-up">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-base/30 bg-green-base/10 mb-6 transition-all duration-300">

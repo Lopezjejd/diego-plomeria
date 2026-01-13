@@ -79,7 +79,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-start gap-3">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-base mt-0.5 shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                                <span className="text-black-light/70 dark:text-white-dark/70 text-sm">{siteSettings.company.address}</span>
+                                <span className="text-black-light/70 dark:text-white-dark/70 text-sm">Medellín, Colombia</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-base mt-0.5 shrink-0"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
