@@ -29,7 +29,7 @@ const Header = () => {
                 <div className="flex items-center gap-8">
                     {/* LOGO */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="relative w-30 sm:w-45 h-10 transition-transform duration-300 group-hover:scale-110">
+                        <div className="relative w-25 sm:w-45 h-10 transition-transform duration-300 group-hover:scale-110">
                             <Image
                                 src="/hero/icono.png"
                                 alt={`${siteSettings.company.name} Logo`}
@@ -48,7 +48,7 @@ const Header = () => {
                                 <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                                 <polyline points="9 22 9 12 15 12 15 22" />
                             </svg>
-                            <span>Inicio</span>
+                            <span className="hidden sm:inline">Inicio</span>
                         </Link>
                     </nav>
                 </div>
@@ -56,8 +56,6 @@ const Header = () => {
                 {/* RIGHT ACTIONS */}
                 <div
                     className="relative flex items-center gap-3"
-                    onMouseEnter={() => setIsMenuOpen(true)}
-                    onMouseLeave={() => setIsMenuOpen(false)}
                 >
                     {/* Blue Services Button */}
                     <button

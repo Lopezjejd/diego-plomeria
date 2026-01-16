@@ -8,9 +8,10 @@ export default function Home() {
     <div className="flex min-h-screen flex-col font-sans">
       <main className="grow">
         <Hero />
-        <ServiceCarousel />
+
         <Features />
         <Zonas />
+        <ServiceCarousel />
       </main>
     </div>
   );

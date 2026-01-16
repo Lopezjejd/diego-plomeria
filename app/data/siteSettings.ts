@@ -80,8 +80,8 @@ export const siteSettings: SiteSettings = {
     home: {
         hero: {
             badge: "Disponibles 24/7 en Medellín",
-            title: "Plomeros Expertos a Domicilio",
-            subtitle: "Servicios profesionales de plomería en tu hogar o negocio. Llegamos en menos de 60 minutos.",
+            title: "Plomeros Expertos en Medellín",
+            subtitle: "Servicios profesionales de plomería en tu hogar o negocio. Llegamos rápido y con calidad garantizada.",
             primaryCTA: "Solicitar Servicio Ahora",
         },
         zonas: {

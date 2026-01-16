@@ -10,42 +10,42 @@ const serviceZones = [
     {
         id: "envigado",
         name: "Envigado",
-        imageUrl: "/slider/envigado.jpg",
+        imageUrl: "/sliders/envigado.jpg",
     },
     {
         id: "sabaneta",
         name: "Sabaneta",
-        imageUrl: "/slider/sabaneta.jpg",
+        imageUrl: "/sliders/sabaneta.jpg",
     },
     {
         id: "itagui",
         name: "Itagüí",
-        imageUrl: "/slider/itagui.jpg",
+        imageUrl: "/sliders/itagui.jpg",
     },
     {
         id: "bello",
         name: "Bello",
-        imageUrl: "/slider/bello.jpg",
+        imageUrl: "/sliders/bello.jpg",
     },
     {
         id: "copacabana",
         name: "Copacabana",
-        imageUrl: "/slider/copacabana.jpg",
+        imageUrl: "/sliders/copacabana.jpg",
     },
     {
         id: "girardota",
         name: "Girardota",
-        imageUrl: "/slider/girardota.jpg",
+        imageUrl: "/sliders/girardota.jpg",
     },
     {
         id: "estrella",
         name: "La Estrella",
-        imageUrl: "/slider/estrella.webp",
+        imageUrl: "/sliders/estrella.webp",
     },
     {
         id: "caldas",
         name: "Caldas",
-        imageUrl: "/slider/caldas.jpg",
+        imageUrl: "/sliders/caldas.jpg",
     },
 ];
 
