@@ -106,9 +106,13 @@ const ProblemList = ({ problems }: ProblemListProps) => {
     return (
         <section className="relative overflow-hidden">
             <PulseGrid variant="red">
+                {/* Dark Overlay for better contrast */}
+                <div className="absolute inset-0 z-0 bg-black/40" />
+                <div className="absolute inset-0 z-0 bg-radial-[at_center_center] from-transparent via-black/20 to-black/80" />
+
                 <div className="container mx-auto px-6 py-24 relative z-10">
                     <div className="flex flex-col items-center text-center mb-16">
-                        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/10 border border-white/20 shadow-sm transition-all duration-300">
+                        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_0_30px_rgba(255,255,255,0.05)] transition-all duration-300">
                             <svg
                                 width="20"
                                 height="20"
@@ -116,13 +120,13 @@ const ProblemList = ({ problems }: ProblemListProps) => {
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth="3"
-                                className="text-white"
+                                className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                             >
                                 <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
                                 <path d="M12 9v4" />
                                 <path d="M12 17h.01" />
                             </svg>
-                            <h2 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase">
+                            <h2 className="text-xl md:text-2xl font-black text-white tracking-tight uppercase drop-shadow-lg">
                                 ¿Te pasa alguno de estos problemas?
                             </h2>
                         </div>
@@ -132,15 +136,15 @@ const ProblemList = ({ problems }: ProblemListProps) => {
                         {problems.map((problem, index) => (
                             <div
                                 key={index}
-                                className="p-8 aspect-square w-70 mx-auto flex flex-col items-center text-center justify-center rounded-[40px] bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl shadow-red-900/20 hover:shadow-red-900/30 hover:border-white/20 transition-all duration-500 group"
+                                className="p-8 aspect-square w-full max-w-[320px] mx-auto flex flex-col items-center text-center justify-center rounded-[40px] bg-black/40 backdrop-blur-2xl border border-white/10 shadow-2xl shadow-red-950/40 hover:shadow-red-500/10 hover:border-white/20 transition-all duration-500 group"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500">
+                                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500 border border-white/5">
                                     <IconWrapper name={problem.icon} />
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4">
+                                <h3 className="text-xl font-bold text-white mb-4 drop-shadow-md">
                                     {problem.title}
                                 </h3>
-                                <p className="text-white/80 leading-relaxed text-sm">
+                                <p className="text-white/90 leading-relaxed text-sm drop-shadow-sm font-medium">
                                     {problem.description}
                                 </p>
                             </div>
