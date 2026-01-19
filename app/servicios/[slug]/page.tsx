@@ -10,7 +10,7 @@ import LocationsSection from "@/app/components/service/LocationsSection";
 import ServiceFAQ from "@/app/components/service/ServiceFAQ";
 import OtherServices from "@/app/components/service/OtherServices";
 import WhatsAppButton from "@/app/components/service/WhatsAppButton";
-import { ServiceJsonLd, FaqJsonLd } from "@/app/components/seo/JsonLd";
+import { ServiceJsonLd, FaqJsonLd, BreadcrumbJsonLd } from "@/app/components/seo/JsonLd";
 
 export const revalidate = 3600; // Refrescar cada hora
 
@@ -83,6 +83,13 @@ export default async function ServicePage({ params }: Props) {
     return (
         <main className="grow">
             {/* JSON-LD Structured Data */}
+            <BreadcrumbJsonLd
+                items={[
+                    { name: "Inicio", item: "https://irgasa.com" },
+                    { name: "Servicios", item: "https://irgasa.com/#servicios" },
+                    { name: service.header.title, item: `https://irgasa.com/servicios/${service.slug}` }
+                ]}
+            />
             <ServiceJsonLd
                 serviceName={service.header.title}
                 serviceDescription={service.seo.description}

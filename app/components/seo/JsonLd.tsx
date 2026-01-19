@@ -10,7 +10,7 @@ interface ServiceJsonLdProps {
 export function LocalBusinessJsonLd() {
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "PlumbingService", // More specific than LocalBusiness
         "@id": "https://irgasa.com/#organization",
         "name": "IRGASA",
         "url": "https://irgasa.com",
@@ -20,31 +20,24 @@ export function LocalBusinessJsonLd() {
         "telephone": `+57${siteSettings.company.phone}`,
         "email": siteSettings.company.email,
         "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Medellín",
+            "addressRegion": "Antioquia",
+            "addressCountry": "CO"
+        },
         "areaServed": {
             "@type": "AdministrativeArea",
             "name": "Medellín y Área Metropolitana, Antioquia, Colombia"
         },
         "serviceArea": [
-            {
-                "@type": "Place",
-                "name": "Medellín"
-            },
-            {
-                "@type": "Place",
-                "name": "Envigado"
-            },
-            {
-                "@type": "Place",
-                "name": "Bello"
-            },
-            {
-                "@type": "Place",
-                "name": "Itagüí"
-            },
-            {
-                "@type": "Place",
-                "name": "Sabaneta"
-            }
+            { "@type": "Place", "name": "Medellín" },
+            { "@type": "Place", "name": "Envigado" },
+            { "@type": "Place", "name": "Bello" },
+            { "@type": "Place", "name": "Itagüí" },
+            { "@type": "Place", "name": "Sabaneta" },
+            { "@type": "Place", "name": "La Estrella" },
+            { "@type": "Place", "name": "Caldas" }
         ],
         "geo": {
             "@type": "GeoCoordinates",
@@ -53,15 +46,14 @@ export function LocalBusinessJsonLd() {
         },
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-            ],
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             "opens": "00:00",
             "closes": "23:59"
         },
         "sameAs": [
             siteSettings.social.instagram,
-            siteSettings.social.facebook
+            siteSettings.social.facebook,
+            siteSettings.social.tiktok
         ].filter(Boolean),
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -71,28 +63,24 @@ export function LocalBusinessJsonLd() {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Instalación de Redes de Gas"
+                        "name": "Instalación de Redes de Gas a Domicilio",
+                        "description": "Instalación profesional y certificada de redes de gas en Medellín."
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Instalación de Acueducto y Alcantarillado"
+                        "name": "Plomería y Alcantarillado",
+                        "description": "Instalación y reparación de tuberías y sistemas sanitarios."
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Diseño de Redes"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Reparación de Fugas y Mantenimiento"
+                        "name": "Mantenimiento y Reparación de Fugas 24/7",
+                        "description": "Atención de emergencias de plomería en todo el Valle de Aburrá."
                     }
                 }
             ]
@@ -120,10 +108,13 @@ export function ServiceJsonLd({ serviceName, serviceDescription, serviceSlug }: 
             "@id": "https://irgasa.com/#organization",
             "name": "IRGASA"
         },
-        "areaServed": {
-            "@type": "AdministrativeArea",
-            "name": "Medellín y Área Metropolitana"
-        },
+        "areaServed": [
+            { "@type": "City", "name": "Medellín" },
+            { "@type": "City", "name": "Envigado" },
+            { "@type": "City", "name": "Itagüí" },
+            { "@type": "City", "name": "Bello" },
+            { "@type": "City", "name": "Sabaneta" }
+        ],
         "serviceType": "Plumbing Service",
         "availableChannel": {
             "@type": "ServiceChannel",
@@ -133,6 +124,27 @@ export function ServiceJsonLd({ serviceName, serviceDescription, serviceSlug }: 
                 "name": "Medellín y Área Metropolitana"
             }
         }
+    }
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+    )
+}
+
+// Breadcrumb Schema
+export function BreadcrumbJsonLd({ items }: { items: { name: string, item: string }[] }) {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": items.map((item, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": item.name,
+            "item": item.item
+        }))
     }
 
     return (

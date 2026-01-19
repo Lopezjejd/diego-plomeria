@@ -8,15 +8,35 @@ import { services } from "@/app/data/services";
 import ScrollReveal from "../ui/ScrollReveal";
 
 const Hero = () => {
-    const [isMobile, setIsMobile] = React.useState<boolean | null>(null);
+    const videoRef = React.useRef<HTMLVideoElement>(null);
 
     React.useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+        const video = videoRef.current;
+        if (!video) return;
+
+        // Force playback
+        const playVideo = () => {
+            video.play().catch(err => {
+                console.log("Autoplay prevented, waiting for interaction", err);
+            });
         };
-        checkMobile();
-        window.addEventListener("resize", checkMobile);
-        return () => window.removeEventListener("resize", checkMobile);
+
+        playVideo();
+
+        // Fallback for interaction
+        const handleInteraction = () => {
+            playVideo();
+            window.removeEventListener("touchstart", handleInteraction);
+            window.removeEventListener("click", handleInteraction);
+        };
+
+        window.addEventListener("touchstart", handleInteraction);
+        window.addEventListener("click", handleInteraction);
+
+        return () => {
+            window.removeEventListener("touchstart", handleInteraction);
+            window.removeEventListener("click", handleInteraction);
+        };
     }, []);
 
     const serviceDetails: Record<string, { icon: React.ReactNode; copy: string }> = {
@@ -62,42 +82,34 @@ const Hero = () => {
         <section className="relative min-h-[90vh] sm:p-15 w-full flex items-center overflow-hidden bg-black">
             {/* BACKGROUND ASSETS */}
             <div className="absolute inset-0 z-0">
-                {/* Mobile/Tablet Background: Centered Video or Image */}
-                <div className="lg:hidden w-full h-full relative">
+                {/* Unified Video Element for both Mobile and Desktop */}
+                <div className="w-full h-full relative">
                     <video
+                        ref={videoRef}
                         autoPlay
                         muted
                         loop
                         playsInline
-                        poster="/hero/bg-desk.jpeg"
-                        className="absolute inset-0 w-full h-full object-cover"
+                        // @ts-ignore
+                        webkit-playsinline="true"
+                        preload="auto"
+                        poster="/hero/hero-backup.jpg"
+                        className="absolute right-0 top-0 h-full object-cover w-full lg:w-[60%] z-0"
                     >
-                        <source src="/hero/video hero.mp4" type="video/mp4" />
+                        <source src="/hero/video-hero.webm" type="video/webm" />
+                        <source src="/hero/video-hero.mp4" type="video/mp4" />
                     </video>
-                    {/* Dark Overlay for Mobile */}
-                    <div className="absolute inset-0 bg-black/60 z-10" />
-                </div>
 
-                {/* Desktop Split Layout (>= lg) */}
-                <div className="hidden lg:block w-full h-full relative">
-                    {/* Right side Video (70% width) */}
-                    <div className="absolute right-0 top-0 w-[70%] h-full">
-                        <video
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            poster="/hero/bg-desk.jpeg"
-                            className="w-full h-full object-cover"
-                        >
-                            <source src="/hero/video hero.mp4" type="video/mp4" />
-                        </video>
+                    {/* Desktop Overlay Layers (>= lg) */}
+                    <div className="hidden lg:block">
+                        {/* Solid Left (40%) */}
+                        <div className="absolute left-0 top-0 w-[40%] h-full bg-black z-10" />
+                        {/* Wide Gradient (from 40% to 80%) */}
+                        <div className="absolute left-[40%] top-0 w-[40%] h-full bg-linear-to-r from-black via-black/80 to-transparent z-10" />
                     </div>
-                    {/* Gradient Transition (20% width overlap: from 30% to 50%) */}
-                    <div className="absolute left-[30%] top-0 w-[20%] h-full bg-linear-to-r from-black via-black/80 to-transparent z-10" />
 
-                    {/* Left Background (Solid Black: first 30%) */}
-                    <div className="absolute left-0 top-0 w-[30%] h-full bg-black z-10" />
+                    {/* Mobile Overlay Layer (< lg) */}
+                    <div className="lg:hidden absolute inset-0 bg-black/60 z-10" />
                 </div>
             </div>
 
@@ -119,7 +131,7 @@ const Hero = () => {
 
                 {/* Main Heading - Maximum Prominence */}
 
-                <h1 className="text-4xl md:text-6xl font-black text-white-light mb-8 tracking-tighter leading-[1.1] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <h1 className="text-5xl md:text-6xl font-black text-white-light mb-8 tracking-tighter leading-[1.1] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                     Plomeros Expertos <br />
                     en <span className="text-blue-light drop-shadow-[0_0_25px_rgba(59,130,246,0.8)]">Medellín</span>
                 </h1>
@@ -127,7 +139,7 @@ const Hero = () => {
 
                 {/* Subheading */}
 
-                <p className="text-xs md:text-2xl text-white-base/90 mb-12 max-w-2xl leading-relaxed font-medium drop-shadow-md lg:mx-0">
+                <p className="text-lg md:text-2xl text-white-base/90 mb-12 max-w-2xl leading-relaxed font-medium drop-shadow-md lg:mx-0">
                     {siteSettings.home.hero.subtitle}
                 </p>
 
