@@ -46,10 +46,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: "website",
             images: [
                 {
-                    url: "/og-image.png",
+                    url: service.imageUrl,
                     width: 1200,
                     height: 630,
-                    alt: `${service.header.title} - IRGASA Medellín`,
+                    alt: `${service.header.title} - IRGASA Plomeros Medellín`,
                 },
             ],
         },
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             card: "summary_large_image",
             title: service.seo.title,
             description: service.seo.description,
-            images: ["/og-image.png"],
+            images: [service.imageUrl],
         },
 
         alternates: {
