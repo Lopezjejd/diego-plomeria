@@ -79,7 +79,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative min-h-[90vh] sm:p-15 w-full flex items-center overflow-hidden bg-black">
+        <section className="relative h-[100vh] sm:p-15 w-full flex items-center overflow-hidden bg-black">
             {/* BACKGROUND ASSETS */}
             <div className="absolute inset-0 z-0">
                 {/* Unified Video Element for both Mobile and Desktop */}
@@ -114,10 +114,9 @@ const Hero = () => {
             </div>
 
             {/* CONTENT */}
-            <div className="relative z-20 container mx-auto px-4 sm:px-6 flex flex-col items-center lg:items-start text-center lg:text-left max-w-7xl pt-20">
-                {/* Badge - Glass Pill with Check */}
+            <div className="relative z-20 container mx-auto px-4 sm:px-6 flex flex-col items-center lg:items-start text-center lg:text-left max-w-7xl pt-20 lg:pt-16">
 
-                <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-500/10 border border-green-500/30 backdrop-blur-md mb-8 shadow-xl">
+                <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-500/10 border border-green-500/30 backdrop-blur-md mb-8 lg:mb-4 shadow-xl">
                     <div className="flex items-center justify-center w-5 h-5 rounded-full bg-green-500/20">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M20 6L9 17L4 12" />
@@ -131,7 +130,7 @@ const Hero = () => {
 
                 {/* Main Heading - Maximum Prominence */}
 
-                <h1 className="text-5xl md:text-6xl font-black text-white-light mb-8 tracking-tighter leading-[1.1] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <h1 className="text-5xl font-black text-white-light mb-8 lg:mb-4 tracking-tighter leading-[1.1] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                     Plomeros Expertos <br />
                     en <span className="text-blue-light drop-shadow-[0_0_25px_rgba(59,130,246,0.8)]">Medellín</span>
                 </h1>
@@ -139,24 +138,24 @@ const Hero = () => {
 
                 {/* Subheading */}
 
-                <p className="text-lg md:text-2xl text-white-base/90 mb-12 max-w-2xl leading-relaxed font-medium drop-shadow-md lg:mx-0">
+                <p className="text-lg text-white-base/90 mb-12 lg:mb-6 max-w-2xl leading-relaxed font-medium drop-shadow-md lg:mx-0">
                     {siteSettings.home.hero.subtitle}
                 </p>
 
 
                 {/* Service Cards Grid - Row Style for both mobile and desktop now */}
-                <div className="grid grid-cols-1 gap-3 w-full mb-8 md:mb-12 max-w-xl">
+                <div className="grid grid-cols-1 gap-3 lg:gap-2 w-full mb-8 lg:mb-6 max-w-xl">
                     {services.map((service) => {
                         const detail = serviceDetails[service.slug];
                         return (
                             <Link
                                 key={service.slug}
                                 href={`/servicios/${service.slug}`}
-                                className="group relative flex items-center text-left p-3 lg:p-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-blue-500/10 gap-3"
+                                className="group relative flex items-center text-left p-3 lg:p-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-blue-500/10 gap-3"
                             >
                                 {/* Icon */}
-                                <div className="shrink-0 p-2 lg:p-3 rounded-full bg-blue-500/10 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
-                                    <div className="w-5 h-5 lg:w-6 lg:h-6">
+                                <div className="shrink-0 p-2 lg:p-1.5 rounded-full bg-blue-500/10 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+                                    <div className="w-5 h-5 lg:w-5.5 lg:h-5.5">
                                         {detail?.icon}
                                     </div>
                                 </div>
@@ -184,7 +183,7 @@ const Hero = () => {
 
                 {/* Trust Indicator - Bottom Thumbs Up */}
 
-                <div className="flex items-center gap-3 text-white-base/80 drop-shadow-lg bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
+                <div className="flex items-center gap-3 text-white-base/80 drop-shadow-lg bg-white/10 backdrop-blur-md rounded-full px-6 py-3 lg:py-2.5 border border-white/20">
                     <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-white-light">
                             <path d="M14 9l-1.1-4.4c-.1-.4-.5-.6-.9-.6H8v9h2l1 6.3c.1.4.5.7 1 .7h1.1c.3 0 .6-.2.7-.5l1.2-4.5c.3-1.1.7-2.1 1.3-3.1.5-.7 1.1-1.3 1.7-1.9V9h-4zM6 14V9H2v5h4z" />

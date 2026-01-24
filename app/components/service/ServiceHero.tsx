@@ -11,7 +11,7 @@ interface ServiceHeroProps {
     primaryCTA: string;
     secondaryCTA?: string;
     serviceName: string;
-    backgroundImage: string;
+    imageUrl: string;
 }
 
 const ServiceHero = ({
@@ -21,18 +21,18 @@ const ServiceHero = ({
     primaryCTA,
     secondaryCTA,
     serviceName,
-    backgroundImage
+    imageUrl
 }: ServiceHeroProps) => {
     const handleCTAClick = () => {
         const message = encodeURIComponent(`Hola, me gustaría solicitar el servicio de ${serviceName}.`);
         window.open(`https://wa.me/${siteSettings.company.whatsapp}?text=${message}`, '_blank');
     };
     return (
-        <section className="relative min-h-[70vh] w-full flex py-20 items-center justify-center overflow-hidden pt-20">
+        <section className="relative h-[70vh] w-full flex py-20 items-center justify-center overflow-hidden pt-20">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src={`/services/${backgroundImage}.jpg`} // Fallback or dynamic if needed, for now using site theme
+                    src={imageUrl}
                     alt={title}
                     fill
                     className="object-cover"

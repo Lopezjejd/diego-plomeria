@@ -105,7 +105,7 @@ export default async function ServicePage({ params }: Props) {
                 primaryCTA={service.cta.primaryText}
                 secondaryCTA={service.cta.secondaryText}
                 serviceName={service.header.title}
-                backgroundImage={service.slug}
+                imageUrl={service.imageUrl}
             />
 
             {/* PROBLEMS LIST */}
@@ -138,7 +138,7 @@ export default async function ServicePage({ params }: Props) {
                         ¿Necesitas ayuda inmediata?
                     </h2>
                     <p className="text-xl md:text-2xl mb-12 text-white-base/90 max-w-2xl mx-auto font-medium">
-                        Atendemos a domicilio las 24 horas del día en todo Medellín y el Valle de Aburrá.
+                        Atendemos a domicilio las 24 horas del día en toda la zona metropolitana  del Valle de Aburrá.
                     </p>
                     <Link
                         href={`https://wa.me/${siteSettings.company.whatsapp}?text=${encodeURIComponent(`Hola, me gustaría solicitar el servicio de ${service.header.title} a domicilio.`)}`}

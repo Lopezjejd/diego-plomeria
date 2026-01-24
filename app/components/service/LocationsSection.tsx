@@ -17,11 +17,9 @@ const LocationsSection = ({ locations }: LocationsSectionProps) => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col items-center text-center mb-12">
                     <h2 className="text-2xl md:text-3xl font-bold text-black-base dark:text-white-light mb-4">
-                        Cobertura en todo Medellín
+                        Cobertura en todo el area metropolitana
                     </h2>
-                    <p className="text-black-light/70 dark:text-white-dark/70">
-                        Llegamos en menos de 60 minutos a tu sector.
-                    </p>
+
                 </div>
 
                 <div className="relative max-w-4xl mx-auto h-[400px] rounded-3xl overflow-hidden shadow-2xl group">

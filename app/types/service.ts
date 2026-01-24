@@ -1,5 +1,6 @@
 export interface ServiceConfig {
   slug: string
+  imageUrl: string
 
   seo: {
     title: string

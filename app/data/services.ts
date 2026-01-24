@@ -3,6 +3,7 @@ import { ServiceConfig } from "@/app/types/service"
 export const services: ServiceConfig[] = [
     {
         slug: "instalacion-redes-gas",
+        imageUrl: "/services/tuberias.webp",
         seo: {
             title: "Instalación de Redes de Gas a Domicilio en Medellín",
             description:
@@ -108,6 +109,7 @@ export const services: ServiceConfig[] = [
     // ============================
     {
         slug: "instalacion-acueducto-alcantarillado",
+        imageUrl: "/services/instalacion-acueducto-alcantarillado.jpg",
         seo: {
             title: "Instalación de Acueducto y Alcantarillado a Domicilio | Medellín",
             description:
@@ -213,6 +215,7 @@ export const services: ServiceConfig[] = [
     // ============================
     {
         slug: "diseno-redes",
+        imageUrl: "/services/diseno-redes.jpg",
         seo: {
             title: "Diseño de Redes de Acueducto y Alcantarillado | Medellín",
             description:
@@ -318,6 +321,7 @@ export const services: ServiceConfig[] = [
     // ============================
     {
         slug: "reparacion-fugas-mantenimiento",
+        imageUrl: "/services/lavaplatos.webp",
         seo: {
             title: "Reparación de Fugas y Mantenimiento a Domicilio | Medellín",
             description:
